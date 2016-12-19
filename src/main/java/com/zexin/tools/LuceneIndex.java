@@ -165,7 +165,7 @@ public class LuceneIndex {
 
         public void run() {
             try {
-                String filePath = System.getProperty("LuceneIndexFilePath") + shardNum + File.separator + "index";
+                String filePath = System.getProperty("luceneIndexFilePath") + shardNum + File.separator + "index";
                 Directory dir = FSDirectory.open(new File(filePath));
                 IndexReader ir = DirectoryReader.open(dir);
                 int num = ir.maxDoc();
